@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>foodpanda | Food Delivery & Takeout | Islamabad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Notice -->
+    <div class="top-notice">
+        🐼 Use code PANDA30 for 30% off your first order! Today only
+    </div>
+    
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Logo -->
+                <div class="logo-container">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <span class="logo-text">foodpanda</span>
+                    </a>
+                </div>
+                
+                <!-- User Actions -->
+                <div class="user-actions">
+                    <button class="action-btn login-btn" id="loginBtn">Log in</button>
+                    <button class="action-btn signup-btn" id="signupBtn">Sign up</button>
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">2</span>
+                    </button>
+                </div>
+                
+                <!-- Location Selector -->
+                <div class="location-container">
+                    <div class="location-btn" id="locationBtn">
+                        <i class="fas fa-map-marker-alt location-icon"></i>
+                        <span class="location-text">New address Service Road W Islamabad</span>
+                        <i class="fas fa-chevron-down location-arrow"></i>
+                    </div>
+                </div>
+                
+                <!-- Search Box -->
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-box" placeholder="Search for restaurants or cuisines..." id="searchBox">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-container" id="navContainer">
+                    <div class="nav-item active" data-tab="delivery">
+                        <i class="fas fa-motorcycle nav-icon"></i>
+                        <span class="nav-text">Delivery</span>
+                    </div>
+                    <div class="nav-item" data-tab="pickup">
+                        <i class="fas fa-shopping-bag nav-icon"></i>
+                        <span class="nav-text">Pick-up</span>
+                    </div>
+                    <div class="nav-item" data-tab="pandamart">
+                        <i class="fas fa-store nav-icon"></i>
+                        <span class="nav-text">pandamart</span>
+                    </div>
+                    <div class="nav-item" data-tab="shops">
+                        <i class="fas fa-building nav-icon"></i>
+                        <span class="nav-text">Shops</span>
+                    </div>
+                    <div class="nav-item" data-tab="dinein">
+                        <i class="fas fa-utensils nav-icon"></i>
+                        <span class="nav-text">Dine-in</span>
+                    </div>
+                    <div class="nav-item" data-tab="catering">
+                        <i class="fas fa-concierge-bell nav-icon"></i>
+                        <span class="nav-text">Catering</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="mobile-sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-paw"></i>
+                </div>
+                <span class="logo-text">foodpanda</span>
+            </div>
+            <button class="mobile-sidebar-close" id="mobileSidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="mobile-nav">
+            <div class="mobile-nav-item active" data-tab="delivery">
+                <i class="fas fa-motorcycle nav-icon"></i>
+                <span class="nav-text">Delivery</span>
+            </div>
+            <div class="mobile-nav-item" data-tab="pickup">
+                <i class="fas fa-shopping-bag nav-icon"></i>
+                <span class="nav-text">Pick-up</span>
+            </div>
+            <div class="mobile-nav-item" data-tab="pandamart">
+                <i class="fas fa-store nav-icon"></i>
+                <span class="nav-text">pandamart</span>
+            </div>
+            <div class="mobile-nav-item" data-tab="shops">
+                <i class="fas fa-building nav-icon"></i>
+                <span class="nav-text">Shops</span>
+            </div>
+            <div class="mobile-nav-item" data-tab="dinein">
+                <i class="fas fa-utensils nav-icon"></i>
+                <span class="nav-text">Dine-in</span>
+            </div>
+            <div class="mobile-nav-item" data-tab="catering">
+                <i class="fas fa-concierge-bell nav-icon"></i>
+                <span class="nav-text">Catering</span>
+            </div>
+        </div>
+        
+        <!-- Mobile Panda Ad -->
+        <div class="sidebar-panda-ad" style="margin-top: 20px;">
+            <div class="sidebar-panda-icon">🐼</div>
+            <div class="sidebar-panda-title">Panda Exclusive!</div>
+            <div class="sidebar-panda-text">Get free delivery on orders above Rs. 1500</div>
+            <button class="btn btn-primary btn-block">Claim Offer</button>
+        </div>
+    </div>
+    
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    
+    <!-- Panda Ad Banner -->
+    <section class="panda-banner">
+        <div class="container">
+            <div class="panda-banner-content">
+                <div class="panda-banner-text">
+                    <div class="panda-badge">PANDA SPECIAL</div>
+                    <h2 class="panda-banner-title">Hungry? Let the panda deliver!</h2>
+                    <p class="panda-banner-subtitle">Order your favorite food and get it delivered in 30 minutes or less. Use code PANDAEATS for 20% off!</p>
+                    <button class="btn btn-primary">Order Now 🐼</button>
+                </div>
+                <div class="panda-banner-icon">🐼</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Your favourite food, delivered fast</h1>
+                    <p class="hero-subtitle">Food, groceries and more from 10,000+ restaurants and shops in Islamabad</p>
+                    <button class="btn btn-primary" id="findRestaurantsBtn">
+                        <i class="fas fa-search"></i> Find restaurants near you
+                    </button>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-img">🍔</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content Area -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Sidebar Panda Ad -->
+                <div class="sidebar-panda-ad">
+                    <div class="sidebar-panda-icon">🐼</div>
+                    <div class="sidebar-panda-title">Panda Power!</div>
+                    <div class="sidebar-panda-text">Download the app for exclusive panda deals</div>
+                    <button class="btn btn-primary btn-block">Get the App</button>
+                </div>
+                
+                <!-- Filters -->
+                <div class="sidebar-card">
+                    <h3 class="filter-title">Filters</h3>
+                    <div class="filter-group">
+                        <div class="filter-option">
+                            <input type="checkbox" id="freeDelivery" checked>
+                            <label for="freeDelivery">Free delivery</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="voucher">
+                            <label for="voucher">Voucher delivery</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="discounts" checked>
+                            <label for="discounts">Discounts</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Filters -->
+                <div class="sidebar-card">
+                    <h3 class="filter-title">Quick Filters</h3>
+                    <button class="filter-btn" id="superRestaurant">
+                        <i class="fas fa-star"></i> Super restaurant
+                    </button>
+                    <button class="filter-btn" id="pandaPick">
+                        <i class="fas fa-paw"></i> Panda's Pick
+                    </button>
+                </div>
+                
+                <!-- Cuisine Filters -->
+                <div class="sidebar-card">
+                    <h3 class="filter-title">Cuisines</h3>
+                    <div class="filter-group">
+                        <div class="filter-option">
+                            <input type="checkbox" id="pakistani" checked>
+                            <label for="pakistani">Pakistani</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="pizza" checked>
+                            <label for="pizza">Pizza</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="bbq">
+                            <label for="bbq">BBQ</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="burgers">
+                            <label for="burgers">Burgers</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="chinese">
+                            <label for="chinese">Chinese</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="desserts">
+                            <label for="desserts">Desserts</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Price Filters -->
+                <div class="sidebar-card">
+                    <h3 class="filter-title">Price</h3>
+                    <div class="price-tags">
+                        <span class="price-tag active">₨</span>
+                        <span class="price-tag">₨₨</span>
+                        <span class="price-tag">₨₨₨</span>
+                    </div>
+                </div>
+                
+                <!-- Second Panda Ad -->
+                <div class="sidebar-panda-ad" style="margin-top: 20px;">
+                    <div class="sidebar-panda-icon">🎁</div>
+                    <div class="sidebar-panda-title">Panda Gift Card</div>
+                    <div class="sidebar-panda-text">Give the gift of food! Perfect for any occasion.</div>
+                    <button class="btn btn-primary btn-block">Buy Now</button>
+                </div>
+            </aside>
+            
+            <!-- Main Content -->
+            <main class="content-area">
+                <!-- Categories Grid -->
+                <section class="categories-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Browse by cuisine</h2>
+                        <a href="#" class="view-all">View all <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="categories-grid" id="categoriesGrid">
+                        <!-- Category cards will be generated by JavaScript -->
+                    </div>
+                </section>
+                
+                <!-- Panda Feature Section -->
+                <section class="panda-banner" style="margin: 30px 0;">
+                    <div class="container">
+                        <div class="panda-banner-content">
+                            <div class="panda-banner-icon">🚀</div>
+                            <div class="panda-banner-text">
+                                <div class="panda-badge">FAST DELIVERY</div>
+                                <h2 class="panda-banner-title">Panda Express Delivery</h2>
+                                <p class="panda-banner-subtitle">Get your food delivered in record time! Our panda riders are faster than ever.</p>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-bolt"></i> Order Express
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Popular Restaurants -->
+                <section class="restaurants-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Popular restaurants</h2>
+                        <a href="#" class="view-all">View all <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="restaurants-grid" id="restaurantsGrid">
+                        <!-- Restaurant cards will be generated by JavaScript -->
+                    </div>
+                </section>
+                
+                <!-- Hot Deals -->
+                <section class="hot-deals">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title">🔥 Today's Deals</h2>
+                            <a href="#" class="view-all" style="color: white;">View all <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                        <div class="deals-scroll">
+                            <div class="deal-card">
+                                <div class="deal-badge">30% OFF</div>
+                                <div class="restaurant-info">
+                                    <h3 class="restaurant-name">Cheezious</h3>
+                                    <div class="delivery-info">Use code CHEEZ30 for 30% off on pizzas</div>
+                                </div>
+                            </div>
+                            <div class="deal-card">
+                                <div class="deal-badge">FREE DELIVERY</div>
+                                <div class="restaurant-info">
+                                    <h3 class="restaurant-name">Burger Lab</h3>
+                                    <div class="delivery-info">Free delivery on all orders above Rs. 1000</div>
+                                </div>
+                            </div>
+                            <div class="deal-card">
+                                <div class="deal-badge">BUY 1 GET 1</div>
+                                <div class="restaurant-info">
+                                    <h3 class="restaurant-name">Pizza Hut</h3>
+                                    <div class="delivery-info">Buy 1 medium pizza, get 1 free</div>
+                                </div>
+                            </div>
+                            <div class="deal-card">
+                                <div class="deal-badge">PANDA SPECIAL</div>
+                                <div class="restaurant-info">
+                                    <h3 class="restaurant-name">Panda's Choice</h3>
+                                    <div class="delivery-info">Selected restaurants with panda approval</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Brands Section -->
+                <section class="brands-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Top brands on foodpanda</h2>
+                        <a href="#" class="view-all">View all <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="brands-grid">
+                        <div class="brand-card">
+                            <div class="brand-logo">🍔</div>
+                            <div class="brand-name">McDonald's</div>
+                        </div>
+                        <div class="brand-card">
+                            <div class="brand-logo">🍕</div>
+                            <div class="brand-name">Pizza Hut</div>
+                        </div>
+                        <div class="brand-card">
+                            <div class="brand-logo">🍗</div>
+                            <div class="brand-name">KFC</div>
+                        </div>
+                        <div class="brand-card">
+                            <div class="brand-logo">🥪</div>
+                            <div class="brand-name">Subway</div>
+                        </div>
+                        <div class="brand-card">
+                            <div class="brand-logo">☕</div>
+                            <div class="brand-name">Gloria Jean's</div>
+                        </div>
+                        <div class="brand-card">
+                            <div class="brand-logo">🍩</div>
+                            <div class="brand-name">Dunkin'</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- App Promo -->
+                <section class="app-promo">
+                    <div class="app-content">
+                        <h2>Get the foodpanda app</h2>
+                        <p>We'll send you a link, open it on your phone to download the app</p>
+                        <div class="app-buttons">
+                            <button class="btn btn-outline" style="color: white; border-color: white;">
+                                <i class="fab fa-apple"></i>
+                                iOS App
+                            </button>
+                            <button class="btn btn-outline" style="color: white; border-color: white;">
+                                <i class="fab fa-google-play"></i>
+                                Android App
+                            </button>
+                        </div>
+                    </div>
+                    <div class="app-image">📱</div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Panda Popup Ad -->
+    <div class="panda-popup-ad" id="pandaPopupAd">
+        <div class="panda-popup-header">
+            <div class="panda-popup-title">Panda Alert! 🐼</div>
+            <button class="panda-popup-close" id="pandaPopupClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="panda-popup-content">
+            <div class="panda-popup-icon">🎉</div>
+            <div class="panda-popup-text">
+                <p><strong>Special offer just for you!</strong></p>
+                <p>Get 25% off your first order with code: HUNGRYPANDA</p>
+                <button class="btn btn-primary" style="margin-top: 10px; width: 100%;">Claim Offer</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Food delivery</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Become a rider</a></li>
+                        <li><a href="#">Partner with us</a></li>
+                        <li><a href="#">Cities</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Imprint</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Partner Support</a></li>
+                        <li><a href="#">Suggest a restaurant</a></li>
+                        <li><a href="#"><i class="fas fa-paw"></i> Panda Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 foodpanda. All rights reserved. <span class="text-primary">🐼</span></p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
